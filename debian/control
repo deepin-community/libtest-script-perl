@@ -1,0 +1,31 @@
+Source: libtest-script-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Vincent Danjean <vdanjean@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libcapture-tiny-perl <!nocheck>,
+                     libprobe-perl-perl <!nocheck>,
+                     libtest-simple-perl (>= 1.302015) <!nocheck>,
+                     libtest2-suite-perl <!nocheck>,
+                     perl
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-script-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-script-perl.git
+Homepage: https://metacpan.org/release/Test-Script
+Rules-Requires-Root: no
+
+Package: libtest-script-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libcapture-tiny-perl,
+         libprobe-perl-perl,
+         libtest-simple-perl (>= 1.302015)
+Description: Perl test module for scripts
+ Test::Script is a Perl module that provides a series of basic tests for those
+ files usually found in the bin or scripts directory of your package. It aims
+ to provide your scripts with perfect platform-compatability and in a way that
+ is as unobstrusive as possible. The general idea is that if a program works
+ on a platform, then Test::Script tests should also pass on that platform.
